@@ -39,7 +39,7 @@
 
 
 ## 💡 使用说明
-作为示例演示，代码为该![示例问卷](https://www.wenjuan.com/s/UZBZJv1Y6b/)提供了处处初始代码，安装完成后请打开![示例问卷](https://www.wenjuan.com/s/UZBZJv1Y6b/)以确认脚本可以正常工作。
+作为示例演示，代码为该[示例问卷](https://www.wenjuan.com/s/UZBZJv1Y6b/)提供了处处初始代码，安装完成后请打开[示例问卷](https://www.wenjuan.com/s/UZBZJv1Y6b/)以确认脚本可以正常工作。
 你可以在主函数中修改以下部分来调整答题逻辑：
 
 ```js
