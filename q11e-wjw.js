@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         q11e-wjw
 // @namespace    https://bbs.tampermonkey.net.cn/
-// @version      1.0.0
+// @version      1.0.2
 // @description  为问卷网量身打造的全新自动化程序
 // @author       zemelee
 // @license      CC-BY-NC-4.0
@@ -277,12 +277,14 @@ async function initial() {
     clickContinue()
     clickRestart()
     initial()
-    // 仅需关注这里的配置即可
+    // 仅需关注此处的配置即可
     const q11es = [
+        // 以下代码针对示例问卷：https://www.wenjuan.com/s/UZBZJv1Y6b
+        // 第一题（单选题，应该调用 single）的脚本未写，留给用户自己编辑，以熟悉此脚本的用法
         () => multiple(2, [50, 50, 50, 50]), // 多选题
         () => blank(3, ["关注公众号", "做实验的研究牲"]),// 填空题
         () => scoreDefault(4, [1, 2, 3, 4, 3]), // 评分题
-        () => scoreDefault(5, [1, 2, 4, 3]), // 评分题
+        () => scoreDefault(5, [1, 2, 4, 3]), // 评分题，此题比例故意写错（对示例问卷而言），以展示脚本的容错能力
         () => matrixScale(6, [[1, 1, 1, 1, 1], [1, 1, 1, 1, 1], [1, 1, 1, 1, 1], [1, 1, 1, 1, 1]]), // 矩阵评分题
         () => scoreDefault(7, [1, 2, 3, 4, 3]),
         () => scoreDefault(8, [1, 2, 3, 4, 3]),
